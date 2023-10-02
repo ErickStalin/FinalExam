@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio de Sesión y Registro</title>
+</head>
+<body>
+    <h1>Selecciona tu rol</h1>
+    <button onclick="showLoginForm('paciente')">Paciente</button>
+    <button onclick="showLoginForm('doctor')">Doctor</button>
+
+    <div id="loginForm" style="display:none;">
+        <h1>Inicio de Sesión</h1>
+        <form id="loginFormPatient" style="display:none;">
+            Correo: <input type="text" name="correo"><br>
+            Contraseña: <input type="password" name="contraseña"><br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+
+        <form id="loginFormDoctor" style="display:none;">
+            Correo: <input type="text" name="correo"><br>
+            Contraseña: <input type="password" name="contraseña"><br>
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+
+        <div id="loginSuccess" style="display:none; color:green;">Inicio de sesión exitoso</div>
+        <div id="loginError" style="display:none; color:red;">Error al iniciar sesión</div>
+    </div>
+    
+    <div id="registroForm" style="display:none;">
+        <h1>Registro</h1>
+        <form id="registroFormPatient" style="display:none;">
+            Nombre: <input type="text" name="nombre"><br>
+            Correo: <input type="text" name="correo"><br>
+            Contraseña: <input type="password" name="contraseña"><br>
+            <input type="submit" value="Registrarse">
+        </form>
+
+        <form id="registroFormDoctor" style="display:none;">
+            Nombre: <input type="text" name="nombre"><br>
+            Correo: <input type="text" name="correo"><br>
+            Contraseña: <input type="password" name="contraseña"><br>
+            <input type="submit" value="Registrarse">
+        </form>
+
+        <div id="registroSuccess" style="display:none; color:green;">Registro exitoso</div>
+        <div id="registroError" style="display:none; color:red;">Error al registrarse</div>
+    </div>
+
+    <div id="pacienteOptions" style="display:none;">
+        <h1>Opciones para Pacientes</h1>
+        <button onclick="consultarCita()">Consultar Cita</button>
+        <button onclick="registrarCita()">Registrar Cita</button>
+    </div>
+
+    <div id="doctorOptions" style="display:none;">
+        <h1>Opciones para Doctores</h1>
+        <button onclick="consultarCitaDoctor()">Consultar Cita</button>
+        <button onclick="eliminarCitaDoctor()">Eliminar Cita</button>
+    </div>
+    <script src="app.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
